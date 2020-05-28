@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Edit Contact</h1>
+<h1>Add Note</h1>
 
 <div>
-  <form action="{% url 'edit_contact' pk=contact.pk %}" method="POST">
+  <form action="{% url 'add_note' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <div>
-      <button type="submit">Update Contact</button>
+      <button type="submit">Add Note</button>
     </div>
   </form>
 </div>
