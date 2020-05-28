@@ -54,5 +54,5 @@ def add_note(request, pk):
         form = NoteForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return redirect(to='list_note')
-    return render(request,"note/add_note.html", {"form": form})
+            return redirect(to='add_note')
+    return render(request,"contacts/add_note.html", {"form": form})

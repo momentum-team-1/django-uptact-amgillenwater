@@ -20,8 +20,8 @@ class NoteForm(forms.ModelForm):
     class Meta:
         model = Note
         fields = [
-            'contact',
+            'name',
             'text',
-            'date',
-            'time',
+            # 'date',
+            # 'time',
         ]
