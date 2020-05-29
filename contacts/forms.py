@@ -22,6 +22,4 @@ class NoteForm(forms.ModelForm):
         fields = [
             'name',
             'text',
-            # 'date',
-            # 'time',
         ]
