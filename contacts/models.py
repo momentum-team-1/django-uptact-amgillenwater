@@ -23,7 +23,7 @@ class Contact(models.Model):
     zip_code = USZipCodeField(null=True, blank=True)
 
 class Note(models.Model):
-    name = models.ForeignKey(to=Contact, on_delete=models.CASCADE)
+    contact = models.ForeignKey(to=Contact, on_delete=models.CASCADE, related_name="notes")
     text = models.TextField(null=True, blank=True)
     time = models.DateTimeField(auto_now_add=True)
 
