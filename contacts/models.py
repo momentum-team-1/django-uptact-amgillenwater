@@ -23,9 +23,11 @@ class Contact(models.Model):
     zip_code = USZipCodeField(null=True, blank=True)
 
 class Note(models.Model):
-    contact = models.ForeignKey(to=Contact, on_delete=models.CASCADE, related_name="notes")
+    contact = models.ForeignKey(to=Contact, on_delete=models.CASCADE, related_name="notes", null=True, blank=True)
     text = models.TextField(null=True, blank=True)
-    time = models.DateTimeField(auto_now_add=True)
-
+    time = models.DateTimeField(auto_now_add=True, blank=True)
+# the following is directly from class notes...i don't understand it, ask/research it
+    def __str__(self):
+        return self.text
 
 

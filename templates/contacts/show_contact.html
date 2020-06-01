@@ -40,8 +40,7 @@
   </p>
 
   <div>
-    {% if note.text %}
-    <div class="flex">
+    {% for note in contact.notes.all %}
       <div>{{ note.text }}</div>
       <div>{{ note.time_stamp }}</div>
     </div>
